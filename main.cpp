@@ -21,6 +21,7 @@ int main(){
         cout<<"2. Listar personas"<<endl;
         cout<<"3. Eliminar personas"<<endl;
         cout<<"4. Simulador"<<endl;
+        cout<<"5. Salir"<<endl;
         cin>>tecla;
         switch(tecla){
             case '1':
@@ -35,6 +36,9 @@ int main(){
             case '4':
                 simulador_durex();
                 break;
+            case '5':
+            seguir=false;
+            break;
             default:
                 cout<<"OPCION INCORRECTA";
 
