@@ -67,6 +67,7 @@ void simulador_durex(){
                     //cout<<v_personas[i]->getnombre()<<endl;
                     cont++;
                 }
+                cont=0;
                 cin>>opcion;
                 if(opcion<0 || opcion>=v_personas.size()){
                 cout<<"incorrecto,opcion fuera de rango"<<endl;
@@ -104,6 +105,7 @@ void simulador_durex(){
                     //cout<<v_personas[i]->getnombre()<<endl;
                     cont2++;
                 }
+                cont2=0;
                 cin>>opcion;
                 if(opcion<0 || opcion>=v_personas.size()){
                 cout<<"incorrecto,opcion fuera de rango"<<endl;
@@ -143,16 +145,15 @@ void simulador_durex(){
         cout<<"¿Còmo desea tener su relacion?"<<endl;
         cout<<"1. Sexo sin protecciòn\n2. Sexo con preservativo Durex"<<endl;
         cin>>tipo_sexo;
-        while(tipo_sexo!=1 || tipo_sexo!=2){
-            cout<<"opcion incorrecta,ingrese de nuevo"<<endl;
-            cin>>tipo_sexo;
-        }
+        
         switch(tipo_sexo){
             case'1':
-
+                cout<<"Probabilidad de : "<< *P1 + *P2 <<"%"<<endl;
+                    
                 break;
-                
+
             case '2':
+                cout<<"Probabilidad de : "<< *P1 * *P2 <<"%"<<endl;
 
                 break;
         }

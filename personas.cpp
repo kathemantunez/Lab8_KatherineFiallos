@@ -62,3 +62,69 @@ void personas::toString(){
     cout<<", Color de piel:"<<color_piel<<" ,Color de ojos:"<<color_ojos<<" ,Fertil?:"<<fertil<<endl;
 
 }
+
+//operadores
+/*
+double figuras::operator+(figuras& rValue){
+    return this->getArea()+ rValue.getArea();
+}
+*/
+
+double personas::operator+(personas& rValue){
+    int num_ran2=1+rand()%(29-1);
+    int num_ran3=1+rand()%(3-1);
+
+     if(num_ran2>=1 && num_ran2<=6){//validar dias fertiles
+            if(num_ran3==1){  //hombre  
+                cout<<"Tiene probabilidad de quedar embaraza"<<endl;
+                cout<<"Tiene 50% de probabilidades que sea el bebè sea Varon"<<endl;
+                return 100;
+                
+            }
+            if(num_ran3==2){//mujer
+                cout<<"Tiene probabilidad de quedar embaraza"<<endl;
+                cout<<"Tiene 50% de probabilidades que sea el bebè sea Mujer"<<endl;
+                return 100;
+
+            }
+
+
+        }else{
+            cout<<"No puede quedar Embaraza,no esta en sus dias Fertiles"<<endl;
+            return 0;
+
+        }
+
+
+
+   
+}
+double personas::operator*(personas& rValue){
+    int num_ran1=1+rand()%(101-1);
+    int num_ran2=1+rand()%(29-1);
+    int num_ran3=1+rand()%(3-1);
+
+    if(num_ran1==1){//validar si el espermatoziide escapa
+        if(num_ran2>=1 && num_ran2<=6){//validar dias fertiles
+            if(num_ran3==1){  //hombre  
+                cout<<"Tiene probabilidad de quedar embaraza"<<endl;
+                cout<<"Tiene 50% de probabilidades que sea el bebè sea Varon"<<endl;
+                return 100;
+            }
+            if(num_ran3==2){//mujer
+                cout<<"Tiene probabilidad de quedar embaraza"<<endl;
+                cout<<"Tiene 50% de probabilidades que sea el bebè sea Mujer"<<endl;
+                return 100;
+            }
+
+
+        }else{
+            cout<<"No puede quedar Embaraza,no esta en sus dias Fertiles"<<endl;
+            return 0;
+        }
+    }else{
+        cout<<"No puede quedar Embaraza, el espermatozoide no escapo del preservativo(DUREX)"<<endl;
+        return 0;
+    }
+    
+}
