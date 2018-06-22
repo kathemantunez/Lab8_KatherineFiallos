@@ -36,8 +36,8 @@ class personas{
         void toString();
 
         //sobrecargas
-        double operator *(personas&);
-        double operator +(personas&);
+        personas* operator *(personas&);
+        personas* operator +(personas&);
 
 
 

@@ -15,6 +15,7 @@ int main(){
     bool seguir=true;
     char tecla;
     do{
+        cout<<"---------------------------------"<<endl;
         cout<<"Preservativos Durex\n!Bienvenido!"<<endl;
         cout<<"1. Agregar personas"<<endl;
         cout<<"2. Listar personas"<<endl;
@@ -54,6 +55,7 @@ void simulador_durex(){
             string sexo;
             personas* P1;
             personas* P2;
+            personas* P3;
 
             //Escoja dos personas para la simulacion
             while(c<=1){
@@ -148,12 +150,20 @@ void simulador_durex(){
         
         switch(tipo_sexo){
             case'1':
-                cout<<"Probabilidad de : "<< *P1 + *P2 <<"%"<<endl;
+                P3=*P1 + *P2;
+                if(P3!=NULL){
+                    v_personas.push_back(P3);
+                }
+               // cout<<"Probabilidad de : "<< *P1 + *P2 <<"%"<<endl;
                     
                 break;
 
             case '2':
-                cout<<"Probabilidad de : "<< *P1 * *P2 <<"%"<<endl;
+                 P3=*P1 * *P2;
+                  if(P3!=NULL){
+                    v_personas.push_back(P3);
+                }
+                //cout<<"Probabilidad de : "<< *P1 * *P2 <<"%"<<endl;
 
                 break;
         }
@@ -170,9 +180,12 @@ void agregar_personas(){
         bool fertil;
         char op;
         char op2;
+        char op_cabello,op_ojos,op_piel;
         cout<<"----INGRESE SUS DATOS:----"<<endl;
         cout<<"Ingrese nombre:"<<endl;
         cin>>nombre;
+
+
         cout<<"Ingrese genero\n1.Masculino\n2.Femenino:"<<endl;
         cin>>op2;
         if(op2=='1'){
@@ -180,12 +193,43 @@ void agregar_personas(){
         }else{
             genero="Femenino";
         }
-        cout<<"Ingrese color de cabello"<<endl;
-        cin>>c_cabello;
-        cout<<"Ingrese color de piel"<<endl;
-        cin>>c_piel;
-        cout<<"Ingrese color de ojos"<<endl;
-        cin>>c_ojos;
+
+
+        cout<<"Ingrese color de cabello\n1.cafe\n2.rubio"<<endl;
+        cin>>op_cabello;
+        if(op_cabello=='1'){
+            c_cabello="cafe";
+        }else{
+             if(op_cabello=='2'){
+                 c_cabello="rubio";
+             }
+             
+        }
+
+
+        cout<<"Ingrese color de piel\n1.blanco\n2.moreno"<<endl;
+        cin>>op_piel;
+         if(op_piel=='1'){
+            c_piel="blanco";
+        }else{
+             if(op_piel=='2'){
+                 c_piel="moreno";
+             }
+             
+        }
+
+
+        cout<<"Ingrese color de ojos\n1.cafe\n\n2.azul"<<endl;
+        cin>>op_ojos;
+        if(op_cabello=='1'){
+            c_ojos="cafe";
+        }else{
+             if(op_cabello=='2'){
+                 c_ojos="azul";
+             }
+             
+        }
+
         cout<<"¿Es fertil?\n1.SI\n2.NO"<<endl;
         cin>>op;
         if(op=='1'){
