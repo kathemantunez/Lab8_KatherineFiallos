@@ -79,7 +79,8 @@ personas* personas::operator+(personas& rValue){//rvalue es el sujeto 2 y el thi
     int num_ran3=1+rand()%(3-1);
     int num_ran4=1+rand()%(3-1);//ran de fertlidad;
 
-     if(num_ran2>=1 && num_ran2<=6){//validar dias fertiles
+    if(num_ran2>=1 && num_ran2<=6){//validar dias fertiles
+   
             if(num_ran3==1){  //hombre  
                 cout<<"Tiene probabilidad de quedar embaraza"<<endl;
                 cout<<"Tiene 50% de probabilidades que sea el bebè sea Varon"<<endl;
@@ -247,6 +248,7 @@ personas* personas::operator*(personas& rValue){
 
     if(num_ran1==1){//validar si el espermatoziide escapa
         if(num_ran2>=1 && num_ran2<=6){//validar dias fertiles
+      
             if(num_ran3==1){  //hombre  
                 cout<<"Tiene probabilidad de quedar embaraza"<<endl;
                 cout<<"Tiene 50% de probabilidades que sea el bebè sea Varon"<<endl;
